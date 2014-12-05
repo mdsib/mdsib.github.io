@@ -14,6 +14,9 @@ a:visited {
 a:hover {
    color:#085;
 }
+a.mp:hover {
+ cursor:url(/mp.png),auto;
+}
 art,work {
    font-size:600%;
 }
