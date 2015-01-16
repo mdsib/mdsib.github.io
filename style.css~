@@ -20,9 +20,6 @@ a[name="mp"]:hover {
 a[name="kcpr"]:hover {
  cursor:url(/img/kcpr.png),auto;
 }
-a[name="edufii"]:hover {
- cursor:url(/img/edufii.png),auto;
-}
 art,work {
    font-size:600%;
 }
