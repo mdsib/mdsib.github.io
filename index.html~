@@ -12,7 +12,7 @@
       <ul class="horiz-ul">
          <li><a target="_blank" href="//musicputty.com" name="mp">Music Putty</a></li>
          <li><a target="_blank" href="//kcpr.org" name="kcpr">KCPR</a></li>
-         <li><a target="_blank" href="//edufii.com">Edufii</a></li>
+         <li><a target="_blank" href="//edufii.com" name="edufii">Edufii</a></li>
       </ul>
       <div class="heading">music</div>
       <ul class="horiz-ul">
