@@ -1,0 +1,33 @@
+<html>
+   <head>
+      <title>Human being, musician, programmer</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <div class="title">
+         <h1>Massimo Siboldi</h1>
+         <div class="self-portrait"></div>
+      </div>
+      <div class="heading">work</div>
+      <ul class="horiz-ul">
+         <li><a target="_blank" href="//musicputty.com" name="mp">Music Putty</a></li>
+         <li><a target="_blank" href="//kcpr.org" name="kcpr">KCPR</a></li>
+         <li><a target="_blank" href="//edufii.com" name="edufii">Edufii</a></li>
+      </ul>
+      <div class="heading">music</div>
+      <ul class="horiz-ul">
+         <li><a target="_blank" href="//soundcloud.com/dreamingandweaving">dreamweaver</a></li>
+      </ul>
+      <div class="heading">past</div>
+      <ul class="horiz-ul">
+         <li><a href="/past.gif">gif</a></li>
+         <li><a target="_blank" href="//boardpusher.com/Siboldi">skateboards</a></li>
+      </ul>
+      <div class="heading">contact</div>
+      <ul class="horiz-ul">
+         <li><a target="_blank" href="mailto:mdsiboldi@gmail.com">mdsiboldi@gmail.com</a></li>
+         <li><a target="_blank" href="tel:6509963443">650.996.3443</a></li>
+         <li><a target="_blank" href="https://github.com/mdsib">mdsib on github</a></li>
+      </ul>
+   </body>
+</html>
