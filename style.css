@@ -1,21 +1,21 @@
+html {
+   transition: background 0.7s;
+}
 * {
  margin:0;
  padding:0;
- font-size:101%;
  box-sizing:border-box;
  transition:0.2s;
+}
+body {
+   font-family:"Open Sans";
+   font-weight:400;
 }
 a {
    color:#3b9;
 }
 a:visited {
    color:#3b9;
-}
-a:hover {
-   color:#085;
-}
-a.mp:hover {
- cursor:url(/mp.png),auto;
 }
 art,work {
    font-size:600%;
@@ -49,45 +49,46 @@ work {
    padding:0 10px;
    color:#3b9;
 }
-.title {
-   width:30%;
-   padding-top:100px;
-   padding-bottom:25px;
-   bottom:15px;
-   overflow:auto;
-
+.vert-ul li {
+   list-style-type:none;
+   padding:0.25em 0;
+   color:#3b9;
 }
-.title:after {
-   content:'';
-   clear:both;
+.vert-ul a:hover {
+   text-decoration:underline;
+}
+.vert-ul a {
+   text-decoration:none;
+   color:black;
+}
+.vert-ul {
+   padding:0 0 3em 0;
 }
 .heading {
-   float:left;
+   font-weight:800;
+   font-size:100%;
 }
-.title,.heading {
+#menu {
+   padding:0 1em;
    color:black;
+   text-shadow-color:black;
    text-align:right;
    width:30%;
    min-width:300px;
-   padding-left:10px;
-   padding-right:10px;
+   float:left;
 }
 h1 {
-   font-weight:100;
+   font-weight:800;
    display:inline;
    float:right;
    font-size:150%;
-   padding-top:11px;
-   padding-left:20px;
+   width:100%;
+   padding:4rem 0 0 0;
 }
-div.outside {
-   position:relative;
-   height:150px;
-   width:33%;
-}
-
-div.rest {
-   height:1000px;
+h2 {
+   font-weight:300;
+   font-size:110%;
+   padding:0 0 3em 0;
 }
 
 div.inside {
@@ -98,4 +99,47 @@ div.inside {
    margin:0px auto;
    position:relative;
    top:120px;
+}
+
+.content {
+   font-size:100%;
+   padding: 4rem 1em;
+   width:52ex;
+   float:left;
+   display:none;
+}
+
+/* Music Putty Specific */
+html.mupu {
+   background:#222;
+}
+html.mupu * {
+   color:white;
+}
+
+/* KCPR Specific */
+html.kcpr {
+   background:#096143;
+}
+html.kcpr * {
+   color:#FF744B;
+}
+
+/* EDUFII Specific */
+html.edufii {
+   background:#e54600;
+}
+
+html.edufii h1, html.edufii .heading, html.edufii .content {
+   color:#eee;
+}
+
+html.edufii h2, html.edufii ul.vert-ul li a {
+   color:#aaa;
+}
+
+/* Blur */
+
+#menu:not(:hover) {
+   opacity:0.6;
 }
