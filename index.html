@@ -3,20 +3,21 @@
    <head>
       <title>Massimo Siboldi</title>
       <link rel="stylesheet" href="style.css" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
-   <body>
-      <div id="menu">
+   <body onscroll="lol()">
+      <nav>
          <h1 name="default">Massimo Siboldi</h1>
          <h2>Full Stack Web Developer</h2>
          <div class="heading">work</div>
          <ul class="vert-ul">
-            <li name="mupu"><a target="_blank" href="//musicputty.com" class="mp">Music Putty</a></li>
-            <li name="kcpr"><a target="_blank" href="//kcpr.org">KCPR</a></li>
-            <li name="edufii"><a target="_blank" href="//edufii.com">Edufii</a></li>
+            <li name="mupu">Music Putty</li>
+            <li name="kcpr">KCPR</li>
+            <li name="edufii">Edufii</li>
          </ul>
          <div class="heading">music</div>
          <ul class="vert-ul">
-            <li><a target="_blank" href="//soundcloud.com/dreamingandweaving">dreamweaver</a></li>
+            <li name="music">dreamweaver</li>
          </ul>
          <div class="heading">contact</div>
          <ul class="vert-ul">
@@ -24,16 +25,27 @@
             <li><a target="_blank" href="tel:6509963443">650.996.3443</a></li>
             <li><a target="_blank" href="https://github.com/mdsib">mdsib on github</a></li>
          </ul>
-      </div>
-      <div class="content" name="mupu-content">
-         Music Putty was bomb
-      </div>
-      <div class="content" name="kcpr-content">
-         KCPR was bomb
-      </div>
-      <div class="content" name="edufii-content">
-         Edufii was bomb
-      </div>
+      </nav>
+      <a class="button" onclick="onBackButton()">&#8592; back</a>
+      <section class="content music" name="music-content">
+            <h1>Music</h1>
+            <p>Sometimes I make music under the pseudonym <a target="_blank" href="//soundcloud.com/dreamingandweaving">dreamweaver</a>.</p>
+      </section>
+      <section class="content mupu scrolled" name="mupu-content">
+            <h1>Music Putty</h1>
+            <p>Music Putty was a crowdfunding platform dedicated to raising money for musicians to tour, record new albums, and pay for new equipment.</p>
+            <p>As co-founder and lead developer, I built Music Putty's web app using angular.js, node.js, MySQL, and Amazon Web Services.</p>
+            <p>More information is available <a target="_blank" href="//musicputty.com">here</a>.</p>
+      </section>
+      <section class="content" name="kcpr-content">
+            <h1>KCPR</h1>
+            <p>KCPR is a community and student run radio station operating out of Cal Poly.</p>
+            <p>As internet director, from 2012-2013, I redesigning and rebuilt an iteration of KCPR's website, in use until 2014. I helped with the site's current iteration, which you can see <a target="_blank" href="//kcpr.org">here</a>.</p>
+      </section>
+      <section class="content" name="edufii-content">
+            <h1>Edufii</h1>
+            <p>During Summer of 2013, I was a front end intern for <a href="//edufii.com">Edufii</a>. I helped style their blog, emails, and an iteration of their landing page.</p>
+      </section>
       <script src="app.js"></script>
       <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800' rel='stylesheet' type='text/css'>
    </body>
