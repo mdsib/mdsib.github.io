@@ -31,6 +31,9 @@ var onBackButton = function() {
    nav.setAttribute("class", "");
    state = "";
    site.setAttribute("class", state);
+   for (var i = 0; i < contents.length; i++) {
+      contents[i].style.display = "none";
+   }
 }
 
 var ifClicked = function() {

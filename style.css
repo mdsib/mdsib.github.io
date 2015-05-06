@@ -188,6 +188,9 @@ a.button {
 
 
 @media (max-width: 914px){
+   nav:not(.scrolled) + a.button {
+      display:none;
+   }
    a.button {
       cursor:pointer;
       padding:1em;
@@ -218,6 +221,9 @@ a.button {
       margin:0;
    }
    nav.scrolled {
+      display:none;
+   }
+   nav.scrolled ~ section {
       display:none;
    }
 }
