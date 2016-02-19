@@ -1,4 +1,7 @@
-mdsib.github.io
-===============
+#mdsib.github.io
 
-my site
+
+Personal site and portfolio. Under development.
+
+#Plans
+Building with Rivets, Crossroads.
