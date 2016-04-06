@@ -6,10 +6,11 @@ var nav = document.getElementsByTagName('nav')[0];
 var role = document.getElementsByTagName('h2')[0];
 var contents = document.querySelectorAll('.content');
 var roles = {
+   "magnifi": "Software Engineer",
    "mupu": "Co-Founder, CTO, Lead Developer",
    "kcpr": "Internet Director",
    "edufii": "Web Design Intern",
-   "default": "Full Stack Web Developer"
+   "default": "Web Developer"
 };
 
 var changePage = function () {
@@ -40,7 +41,7 @@ var ifClicked = function() {
    state = this.getAttribute("name");
    var attr = null;
    nav.setAttribute("class", "scrolled");
-   
+
    for (var i = 0; i < links.length; i++) {
       if (attr = (links[i].getAttribute("class")))
          links[i].setAttribute("class", attr.replace(" underline", ""));

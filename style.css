@@ -1,5 +1,5 @@
 html {
-   transition:0.8s;
+   transition:0.2s;
 }
 * {
  margin:0;
@@ -138,6 +138,20 @@ section.content {
    width:70ex;
    float:left;
    display:none;
+}
+
+/* Magnifi Specific */
+
+html.magnifi {
+   background: #ddd;
+}
+
+html.magnifi * {
+   color: #ea345f;
+}
+
+html.magnifi a {
+   color: #ea345f;
 }
 
 /* Music Putty Specific */
