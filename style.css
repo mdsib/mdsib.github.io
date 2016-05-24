@@ -140,7 +140,7 @@ section.content {
    display:none;
 }
 
-/* Magnifi Specific */
+/* Magnifi Specific * /
 
 html.magnifi {
    background: #ddd;
@@ -154,7 +154,7 @@ html.magnifi a {
    color: #ea345f;
 }
 
-/* Music Putty Specific */
+/* Music Putty Specific * /
 
 html.mupu {
    background:#222;
@@ -168,7 +168,7 @@ html.mupu a {
    color:#0fa;
 }
 
-/* KCPR Specific */
+/* KCPR Specific * /
 
 html.kcpr {
    background:#096143;
@@ -182,7 +182,7 @@ html.kcpr a {
    color:#FF947B;
 }
 
-/* EDUFII Specific */
+/* EDUFII Specific * /
 
 html.edufii {
    background:#e54600;
@@ -195,6 +195,7 @@ html.edufii h1, html.edufii .heading, html.edufii .content {
 html.edufii h2, html.edufii ul.vert-ul li, html.edufii a {
    color:#aaa;
 }
+*/
 
 a.button {
    display:none;
