@@ -58,7 +58,8 @@ work {
 
 .vert-ul li {
    list-style-type:none;
-   padding:0.25em 0;
+   padding:0.2em 0;
+   font-size: 0.8em;
    cursor:pointer;
 }
 
@@ -72,12 +73,14 @@ work {
 }
 
 .heading {
-   font-weight:800;
-   font-size:100%;
+   font-family: Open Sans Condensed;
+   font-weight:700;
+   font-size:1em;
+   text-transform: uppercase;
 }
 
 nav {
-   padding:0 1em;
+   padding:4em 1em 0;
    color:black;
    text-shadow-color:black;
    text-align:right;
@@ -86,25 +89,35 @@ nav {
    float:left;
 }
 
-nav h1, nav h2 {
-   cursor:pointer;
+#nav-header {
+  height: 2.1em;
+  position: relative;
+  margin-bottom: 2em;
+}
+
+#nav-header #nav-header-logo {
+  height: 100%;
+  position: absolute;
+  right: 11.5em;
+}
+
+#nav-header h1, #nav-header h2 {
+  font-family: Open Sans Condensed, Open Sans, sans-serif;
+  font-weight:700;
+  cursor:pointer;
 }
 
 h1 {
-   font-weight:800;
    display:inline;
-   float:right;
    font-size:1.5rem;
+   text-transform: uppercase;
    line-height:0.7;
    width:100%;
-   padding:4rem 0 0 0;
 }
 
 h2 {
-   font-weight:300;
-   line-height:2.2;
-   font-size:1.1rem;
-   padding:0 0 3em 0;
+   font-size:1em;
+   text-transform: lowercase;
 }
 
 section.content h1 {
@@ -224,6 +237,12 @@ a.button {
       float:right;
       width:100%;
    }
+  #nav-header #nav-header-logo {
+    height: 50%;
+    top: 1.6em;
+    padding-bottom: 0.5em;
+    right: 6.1em;
+  }
    section {
       max-width:95%;
    }
