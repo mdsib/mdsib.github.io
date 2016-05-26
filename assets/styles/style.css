@@ -89,7 +89,7 @@ work {
 }
 
 .heading {
-   font-family: Fort Condensed;
+   font-family: Fort Condensed, Open Sans Condensed, Open Sans, sans-serif;
    font-weight:700;
    font-size:1em;
    text-transform: uppercase;
@@ -119,7 +119,7 @@ nav {
 }
 
 #nav-header h1, #nav-header h2 {
-  font-family: Fort Condensed, Open Sans, sans-serif;
+  font-family: Fort Condensed, Open Sans Condensed, Open Sans, sans-serif;
   font-weight:700;
   cursor:pointer;
 }
@@ -144,7 +144,7 @@ section.content h1 {
    display: block;
    margin:0;
    font-size:3rem;
-   font-family: Fort Condensed;
+   font-family: Fort Condensed, Open Sans Condensed, Open Sans, sans-serif;
    text-align:left;
 }
 
