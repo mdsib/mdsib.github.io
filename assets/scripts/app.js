@@ -24,11 +24,12 @@ var maybeChangePageBack = function () {
       site.setAttribute("class", state);
 }
 
-var links = document.querySelectorAll(".vert-ul li");
+var links = document.querySelectorAll("nav a");
 
 links[links.length] = (document.querySelectorAll("h1")[0]);
 
 var onBackButton = function() {
+   setNavActiveStates("nothing");
    nav.setAttribute("class", "");
    state = "";
    site.setAttribute("class", state);
@@ -37,16 +38,20 @@ var onBackButton = function() {
    }
 }
 
-var ifClicked = function() {
-   state = this.getAttribute("name");
-   var attr = null;
-   nav.setAttribute("class", "scrolled");
+var setNavActiveStates = function(state) {
+  var link;
+  for(var i = 0; i < links.length; i++) {
+    link = links[i];
+    if (link.getAttribute("name") == state) {
+      link.setAttribute("class", "active");
+    }
+    else {
+      link.setAttribute("class", "");
+    }
+  }
+}
 
-   for (var i = 0; i < links.length; i++) {
-      if (attr = (links[i].getAttribute("class")))
-         links[i].setAttribute("class", attr.replace(" underline", ""));
-   }
-   this.setAttribute("class", this.getAttribute("class") + " underline");
+var displayContent = function(state) {
    for (var i = 0; i < contents.length; i++) {
       if (contents[i].getAttribute("name") == state + "-content") {
          contents[i].style.display = "block";
@@ -55,6 +60,14 @@ var ifClicked = function() {
          contents[i].style.display = "none";
       }
    }
+   nav.setAttribute("class", "scrolled");
+}
+
+var ifClicked = function() {
+   state = this.getAttribute("name");
+   setNavActiveStates(state);
+   displayContent(state);
+
    site.setAttribute("class", state);
 }
 //var clearPage = function () {

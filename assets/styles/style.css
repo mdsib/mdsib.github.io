@@ -1,5 +1,4 @@
 html {
-   transition:0.2s;
 }
 * {
  margin:0;
@@ -7,11 +6,18 @@ html {
  box-sizing:border-box;
 }
 
+#test {
+  width: 1px;
+  height: 1px;
+  display: block;
+  position: fixed;
+  top: 253px;
+  left: 102px;
+  background: red;
+}
+
 a {
    color:black;
-}
-.vert-ul li a {
-   text-decoration:none;
 }
 
 body {
@@ -58,22 +64,32 @@ work {
 
 .vert-ul li {
    list-style-type:none;
-   padding:0.2em 0;
    font-size: 0.8em;
-   cursor:pointer;
 }
 
-.vert-ul li:hover {
-   text-decoration:underline;
+.vert-ul li a {
+  cursor: pointer;
+  padding: 0.4em 0;
+  display: block;
 }
 
+.vert-ul li a:hover {
+  text-decoration: underline;
+}
+.vert-ul li a.active {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.vert-ul li a:before:hover {
+}
 
 .vert-ul {
    padding:0 0 3em 0;
 }
 
 .heading {
-   font-family: Open Sans Condensed;
+   font-family: Fort Condensed;
    font-weight:700;
    font-size:1em;
    text-transform: uppercase;
@@ -99,10 +115,11 @@ nav {
   height: 100%;
   position: absolute;
   right: 11.5em;
+  cursor: pointer;
 }
 
 #nav-header h1, #nav-header h2 {
-  font-family: Open Sans Condensed, Open Sans, sans-serif;
+  font-family: Fort Condensed, Open Sans, sans-serif;
   font-weight:700;
   cursor:pointer;
 }
@@ -110,9 +127,12 @@ nav {
 h1 {
    display:inline;
    font-size:1.5rem;
-   text-transform: uppercase;
-   line-height:0.7;
+   line-height:0.9;
    width:100%;
+}
+
+nav h1 {
+  text-transform: uppercase;
 }
 
 h2 {
@@ -121,16 +141,16 @@ h2 {
 }
 
 section.content h1 {
-   padding:0 0 1.1em 0;
+   display: block;
    margin:0;
-   font-size:4rem;
-   line-height:0.6;
+   font-size:3rem;
+   font-family: Fort Condensed;
    text-align:left;
 }
 
 section.content p {
    padding:0.5em 0;
-   font-size:1.1em;
+   font-size:1em;
    line-height:1.5;
 }
 
@@ -148,111 +168,65 @@ div.inside {
 section.content {
    font-size:100%;
    padding: 4rem 1em;
-   width:70ex;
+   width:calc(100% - 300px);
+   max-width: 600px;
    float:left;
    display:none;
 }
-
-/* Magnifi Specific * /
-
-html.magnifi {
-   background: #ddd;
-}
-
-html.magnifi * {
-   color: #ea345f;
-}
-
-html.magnifi a {
-   color: #ea345f;
-}
-
-/* Music Putty Specific * /
-
-html.mupu {
-   background:#222;
-}
-
-html.mupu * {
-   color:#ddd;
-}
-
-html.mupu a {
-   color:#0fa;
-}
-
-/* KCPR Specific * /
-
-html.kcpr {
-   background:#096143;
-}
-
-html.kcpr * {
-   color:#FF744B;
-}
-
-html.kcpr a {
-   color:#FF947B;
-}
-
-/* EDUFII Specific * /
-
-html.edufii {
-   background:#e54600;
-}
-
-html.edufii h1, html.edufii .heading, html.edufii .content {
-   color:#eee;
-}
-
-html.edufii h2, html.edufii ul.vert-ul li, html.edufii a {
-   color:#aaa;
-}
-*/
 
 a.button {
    display:none;
 }
 
 
-@media (max-width: 914px){
+@media (max-width: 767px){
    nav:not(.scrolled) + a.button {
       display:none;
    }
    a.button {
-      cursor:pointer;
-      padding:1em;
-      display:block;
-      width:100%;
-      float:left;
-      opacity:0.6;
+     cursor: pointer;
+     padding: 0.5em;
+     display: block;
+     width: 3em;
+     float: left;
+     opacity: 0.6;
+     position: absolute;
+     top: 0.2em;
+     font-size: 2em;
    }
    a.button:hover {
       opacity:1;
    }
    html {
-      font-size:150%;
+      font-size:110%;
    }
    nav {
       float:right;
       width:100%;
+      padding-top: 2em;
    }
   #nav-header #nav-header-logo {
-    height: 50%;
-    top: 1.6em;
-    padding-bottom: 0.5em;
-    right: 6.1em;
+    left: 0em;
+  }
+  ul.vert-ul {
+    padding-bottom: 2em;
+  }
+  ul.vert-ul a {
+    font-size: 125%;
   }
    section {
       max-width:95%;
    }
    section.content {
-      padding:0 1em;
+      padding:1em 1em 0;
+      width: 100%;
+      max-width: none;
    }
    section.content h1 {
       line-height:0.9;
       padding:0.25em 0;
       margin:0;
+      text-align: right;
    }
    nav.scrolled {
       display:none;
