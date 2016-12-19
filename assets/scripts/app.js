@@ -6,6 +6,7 @@ var nav = document.getElementsByTagName('nav')[0];
 var role = document.getElementsByTagName('h2')[0];
 var contents = document.querySelectorAll('.content');
 var roles = {
+   "disqus": "Software Engineer",
    "magnifi": "Software Engineer",
    "mupu": "Co-Founder, CTO, Lead Developer",
    "kcpr": "Internet Director",
