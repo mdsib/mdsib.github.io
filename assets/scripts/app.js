@@ -6,79 +6,66 @@ var nav = document.getElementsByTagName('nav')[0];
 var role = document.getElementsByTagName('h2')[0];
 var contents = document.querySelectorAll('.content');
 var roles = {
-   "disqus": "Software Engineer",
-   "magnifi": "Software Engineer",
-   "mupu": "Co-Founder, CTO, Lead Developer",
-   "kcpr": "Internet Director",
-   "edufii": "Web Design Intern",
-   "default": "Web Developer"
+    "disqus": "Software Engineer",
+    "magnifi": "Software Engineer",
+    "mupu": "Co-Founder, CTO, Lead Developer",
+    "kcpr": "Internet Director",
+    "edufii": "Web Design Intern",
+    "default": "Web Developer"
 };
 
-var changePage = function () {
-   var name = this.getAttribute("name");
-   if (!state) {
-      site.setAttribute("class", name);
-   }
-}
-
-var maybeChangePageBack = function () {
-      site.setAttribute("class", state);
-}
-
-var links = document.querySelectorAll("nav a");
-
-links[links.length] = (document.querySelectorAll("h1")[0]);
+var links = document.querySelectorAll("nav a, [data-home-link]");
 
 var onBackButton = function() {
-   setNavActiveStates("nothing");
-   nav.setAttribute("class", "");
-   state = "";
-   site.setAttribute("class", state);
-   for (var i = 0; i < contents.length; i++) {
-      contents[i].style.display = "none";
-   }
-}
+    setNavActiveStates("");
+    displayContent();
+};
 
 var setNavActiveStates = function(state) {
-  var link;
-  for(var i = 0; i < links.length; i++) {
-    link = links[i];
-    if (link.getAttribute("name") == state) {
-      link.setAttribute("class", "active");
+    var link;
+    for(var i = 0; i < links.length; i++) {
+        link = links[i];
+        if (link.getAttribute("name") == state) {
+            link.setAttribute("class", "active");
+            let style = window.getComputedStyle(link);
+            link.style.transform = style.transform;
+            link.style.opacity = style.opacity;
+            link.style.animation = "none";
+            link.style.filter = "none";
+        }
+        else {
+            link.style.transform = "none";
+            link.setAttribute("class", "");
+            link.style.animation = null;
+            link.style.filter = null;
+            link.style.transform = null;
+        }
+    }
+};
+
+var displayContent = function(state, scrolled) {
+    for (var i = 0; i < contents.length; i++) {
+        if (contents[i].getAttribute("name") == state + "-content") {
+            contents[i].classList.add("active");
+        }
+        else {
+            contents[i].classList.remove("active");
+        }
+    }
+    if (scrolled) {
+        nav.classList.add("scrolled");
     }
     else {
-      link.setAttribute("class", "");
+        nav.classList.remove("scrolled");
     }
-  }
-}
-
-var displayContent = function(state) {
-   for (var i = 0; i < contents.length; i++) {
-      if (contents[i].getAttribute("name") == state + "-content") {
-         contents[i].style.display = "block";
-      }
-      else {
-         contents[i].style.display = "none";
-      }
-   }
-   nav.setAttribute("class", "scrolled");
-}
+};
 
 var ifClicked = function() {
-   state = this.getAttribute("name");
-   setNavActiveStates(state);
-   displayContent(state);
+    state = this.getAttribute("name");
+    setNavActiveStates(state);
+    displayContent(state, state !== 'default');
+};
 
-   site.setAttribute("class", state);
-}
-//var clearPage = function () {
-//   if (!state) {
-//      site.setAttribute("class", "");
-//      role.innerHTML = roles["default"];
-//   }
-//}
 for (var i=0; i < links.length; i++) {
-   links[i].addEventListener('mouseenter', changePage);
-   links[i].addEventListener('mouseleave', maybeChangePageBack);
-   links[i].addEventListener('click', ifClicked);
+    links[i].addEventListener('click', ifClicked);
 }
