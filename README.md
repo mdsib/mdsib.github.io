@@ -1,7 +1,1 @@
-#mdsib.github.io
-
-
-Personal site and portfolio. Under development.
-
-#Plans
-Building with Rivets, Crossroads.
+a redirect to [massi.world](https://massi.world/)
